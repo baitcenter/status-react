@@ -70,7 +70,7 @@
 (spec/def ::web3 (spec/nilable any?))
 (spec/def ::web3-node-version (spec/nilable string?))
 ;;object?
-(spec/def ::webview-bridge (spec/nilable any?))
+(spec/def ::webview (spec/nilable any?))
 
 ;;height of native keyboard if shown
 (spec/def ::keyboard-height (spec/nilable number?))
@@ -264,7 +264,7 @@
                                    ::initial-props
                                    ::web3
                                    ::web3-node-version
-                                   ::webview-bridge
+                                   ::webview
                                    ::keyboard-height
                                    ::keyboard-max-height
                                    ::network-status
