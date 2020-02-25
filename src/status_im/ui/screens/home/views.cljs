@@ -10,7 +10,6 @@
             [status-im.ui.components.toolbar.view :as toolbar]
             [status-im.ui.screens.home.styles :as styles]
             [status-im.utils.platform :as platform]
-            [status-im.ui.components.tabbar.styles :as tabs.styles]
             [status-im.ui.screens.home.views.inner-item :as inner-item]
             [status-im.ui.components.common.common :as components.common]
             [status-im.ui.components.list-selection :as list-selection]
@@ -172,8 +171,6 @@
                        window-width)]
       [react/view (merge {:flex 1
                           :width home-width}
-                         (when platform/ios?
-                           {:margin-bottom tabs.styles/tabs-diff})
                          (when two-pane-ui-enabled?
                            {:border-right-width 1 :border-right-color colors/gray-lighter}))
        [react/keyboard-avoiding-view {:style     {:flex 1}
