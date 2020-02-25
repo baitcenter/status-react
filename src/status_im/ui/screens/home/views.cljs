@@ -46,9 +46,9 @@
     [react/i18n-text {:style styles/welcome-text-description
                       :key   :welcome-to-status-description}]]
    [react/view {:align-items :center :margin-bottom 50}
-    [components.common/button {:on-press #(re-frame/dispatch [:navigate-back])
+    [components.common/button {:on-press            #(re-frame/dispatch [:navigate-to :tabs])
                                :accessibility-label :lets-go-button
-                               :label    (i18n/label :t/lets-go)}]]])
+                               :label               (i18n/label :t/lets-go)}]]])
 
 (defn home-tooltip-view []
   [react/view styles/chat-tooltip

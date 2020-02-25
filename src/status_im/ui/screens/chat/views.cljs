@@ -85,7 +85,7 @@
                                     :margin-bottom 32)}
    (i18n/label :t/tribute-required-by-multiaccount {:multiaccount-name name})
    [{:style {:color colors/blue}
-     :on-press #(re-frame/dispatch [:navigate-to :tribute-learn-more])}
+     :on-press #(re-frame/dispatch [:navigate-to :modals {:screen :tribute-learn-more}])}
     (str " " (i18n/label :learn-more))]])
 
 (defn intro-header
