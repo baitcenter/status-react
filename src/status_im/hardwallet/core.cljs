@@ -19,6 +19,7 @@
             [status-im.multiaccounts.update.core :as multiaccounts.update]
             [status-im.multiaccounts.recover.core :as multiaccounts.recover]))
 
+;; FIXME(Ferossgp): Separate into multiple components with EXPLICIT back action
 (fx/defn enter-pin-navigate-back-button-clicked
   {:events [:hardwallet.ui/enter-pin-navigate-back-button-clicked]}
   [{:keys [db] :as cofx}]
