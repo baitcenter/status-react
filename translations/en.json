@@ -1088,5 +1088,7 @@
     "cant-report-bug": "Can't report a bug",
     "mail-should-be-configured": "Mail client should be configured",
     "check-on-etherscan": "Check on etherscan",
-    "transactions-load-more": "Load more"
+    "transactions-load-more": "Load more",
+    "waku-enabled": "Waku enabled",
+    "waku-bloom-filter-mode": "Waku bloom filter mode"
 }
