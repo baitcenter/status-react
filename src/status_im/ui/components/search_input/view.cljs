@@ -1,5 +1,5 @@
 (ns status-im.ui.components.search-input.view
-  (:require-macros [status-im.utils.views :as views])
+  (:require-macros [status-im.utils.views :refer [defview letsubs]])
   (:require [reagent.core :as reagent]
             [status-im.i18n :as i18n]
             [status-im.ui.components.react :as react]
@@ -7,15 +7,15 @@
             [status-im.ui.components.search-input.styles :as styles]
             [status-im.ui.components.icons.vector-icons :as icons]))
 
-(views/defview search-input [{:keys [on-cancel
-                                     on-focus
-                                     on-change
-                                     search-active?
-                                     search-container-style
-                                     search-filter
-                                     auto-focus]}]
-  (views/letsubs
-    [input-ref (reagent/atom nil)]
+(defview search-input [{:keys [on-cancel
+                               on-focus
+                               on-change
+                               search-active?
+                               search-container-style
+                               search-filter
+                               auto-focus]
+                        :or   {search-active? (reagent/atom nil)}}]
+  (letsubs [input-ref (reagent/atom nil)]
     [react/view {:style (or search-container-style styles/search-container)}
      [react/view {:style styles/search-input-container}
       [icons/icon :main-icons/search {:color           colors/gray
