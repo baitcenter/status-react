@@ -63,7 +63,7 @@ def build(Map opts = [:]) {
       set +x
       . ~/.nix-profile/etc/profile.d/nix.sh
       set -x
-      nix-build ${_getNixCommandArgs(opts, false)}
+      nix-build --keep-failed ${_getNixCommandArgs(opts, false)}
     """
   ).trim()
   /* if not linking, copy results, but only if there's just one path */
