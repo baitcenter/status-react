@@ -37,3 +37,8 @@
                 {:resolve-public-key {:chain            chain
                                       :contact-identity new-identity
                                       :cb               #(re-frame/dispatch [:new-chat/set-new-identity % new-identity])}}))))))
+
+(handlers/register-handler-fx
+ ::new-chat-focus
+ (fn [{:keys [db]}]
+   {:db (dissoc db :contacts/new-identity :contacts/new-identity-error)}))

@@ -23,6 +23,8 @@
          :component intro/intro}
         {:name      :multiaccounts
          :component multiaccounts/multiaccounts})
+      {:name      :progress
+       :component progress/progress}
       {:name      :login
        :component login/login}
       ;; {:name :intro-wizard
